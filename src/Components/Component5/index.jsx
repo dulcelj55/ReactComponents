@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
 
 const Component5 = () => {
-  return (
-    <div>component5</div>
-  )
-}
+  const [theme, setTheme] = useState(dark);
 
-export default Component5
+  const turn = () => {
+    if (useState == dark) {
+      setTheme(light);
+    } else if (useState == light) {
+      setTheme(dark);
+    }
+  };
+
+  return (
+    <>
+      <button onClick={turn}>Switch</button>
+      <div className="dark"> DARK MODE</div>
+    </>
+  );
+};
+
+export default Component5;

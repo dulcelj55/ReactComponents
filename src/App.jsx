@@ -29,7 +29,7 @@ function App() {
       <h1><Component4/></h1>
       
     </div>
-    <div className="component-container purple">
+    <div className="component-container yellow">
       <h1><Component5/></h1>
      
     </div>
