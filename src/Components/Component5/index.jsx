@@ -1,20 +1,21 @@
-import React from "react";
+import {useState}from "react";
+import "./index.css"
 
 const Component5 = () => {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = useState("dark");
 
   const turn = () => {
-    if (useState == dark) {
-      setTheme(light);
-    } else if (useState == light) {
-      setTheme(dark);
+    if (theme == "dark") {
+      setTheme("light");
+    } else if (theme == "light") {
+      setTheme('dark');
     }
   };
 
   return (
     <>
       <button onClick={turn}>Switch</button>
-      <div className="dark"> DARK MODE</div>
+      <div className={theme}> DARK MODE</div>
     </>
   );
 };

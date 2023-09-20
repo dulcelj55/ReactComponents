@@ -9,7 +9,7 @@ import Component5 from './Components/Component5'
 import Component6 from './Components/Component6'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts]= useState({title: "hair dryer", description: "drys hair"})
 
   return (
     <> <div className="App">
@@ -33,10 +33,14 @@ function App() {
       <h1><Component5/></h1>
      
     </div>
-    <div className="component-container purple">
-      <h1><Component6/></h1>
+    <div className="component-container orange">
+      <h1><Component6 products={products}/></h1>
      
     </div>
+    {/* <div className="component-container purple">
+      <h1><Component7/></h1>
+     
+    </div> */}
   </div>
       
     </>

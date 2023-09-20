@@ -7,28 +7,28 @@ const [inputValue, setInputValue] = useState("")
 const handleChange=(e)=> {
     setInputValue(e.target.value);
 }
-const handleSubmit= ()=>{
-    
-    setNames(names.push({inputValue}))
-    
+const handleSubmit= (e)=>{
+    e.preventDefault()
+    let namesCopy = [...names]
+namesCopy.push(inputValue)
 
-    const newList=()=>{
-
-        names.map(item)=>{
-    
-            return <li>{item}</li>
-        }
-    
-    
+    setNames(namesCopy)
     setInputValue("")
-    
-}}
+}
 
   return (
-    <form>
+    <>
+    <ul>
+        {names.map((name)=>{
+            return <li>{name}</li>
+        })}
+    </ul>
+    <form onSubmit={handleSubmit}>
         <input value={inputValue} onChange={handleChange} />
-        <button onClick={handleSubmit}>Submit</button>
+        <button>Submit</button>
+
     </form>
+    </>
   )
 }
 
